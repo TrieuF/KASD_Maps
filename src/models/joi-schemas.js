@@ -30,7 +30,7 @@ export const PlacemarkSpec = Joi.object()
         description: Joi.string().required().allow("").example("a really long wall"),
         lat: Joi.number().min(-90).max(90).example(40.44170),
         lng: Joi.number().min(-180).max(180).example(116.56647),
-        category: Joi.string().required().example("Wonder of the World"),
+        category: Joi.string().required().example("Wonder-of-the-World"),
         createdBy: IdSpec.optional(),
         img: Joi.string().optional(),
     })
@@ -44,7 +44,7 @@ export const PlacemarkSpecReal = Joi.object()
             lat: Joi.number().min(-90).max(90).example(40.44170),
             lng: Joi.number().min(-180).max(180).example(116.56647),
         },
-        category: Joi.string().required().example("Wonder of the World"),
+        category: Joi.string().required().example("Wonder-of-the-World"),
         createdBy: IdSpec.optional(),
         img: Joi.string().allow("").optional().example(""),
     })
