@@ -39,7 +39,7 @@ export const PlacemarkSpec = Joi.object()
 export const PlacemarkSpecReal = Joi.object()
     .keys({
         name: Joi.string().required().example("Great Wall of China"),
-        description: Joi.string().required().example("a really long wall"),
+        description: Joi.string().required().allow("").example("a really long wall"),
         location: {
             lat: Joi.number().min(-90).max(90).example(40.44170),
             lng: Joi.number().min(-180).max(180).example(116.56647),
