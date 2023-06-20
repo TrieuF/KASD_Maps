@@ -20,6 +20,9 @@ export const imageStore = {
     },
 
     deleteImage: async function(img) {
-        await cloudinary.v2.uploader.destroy(img, {});
+        const shorturl = img.slice(0, -4);
+        const words = shorturl.split("/")
+        const public_id = words.pop();
+        await cloudinary.v2.uploader.destroy(public_id, {});
     }
 };
