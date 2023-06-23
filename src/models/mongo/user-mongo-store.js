@@ -33,7 +33,7 @@ export const userMongoStore = {
 
     async isAdmin(id) {
         const u = this.getUserById(id);
-        return u.isadmin;
+        return u.isAdmin;
     },
 
     async deleteUserById(id) {
